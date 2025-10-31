@@ -1,9 +1,19 @@
-document.DOMContentLoaded=function(){
-    function asignar(){
- 	    let parra = document.querySelector("div");
-	    parra.onclick=function(){
-			cambiaColor(“red”,parra);
-        }
-    }
+window.onload = () => {
+ 	    let parra = document.querySelectorAll("div");
+        
+        parra.forEach(current => {
+            current.onclick=function(){
+                if(document.body.style.backgroundColor == current.style.backgroundColor){
+                    //si vuelves a pulsar se pone blanco
+                    document.body.style.setProperty("background-color","white");
+                    
+                }else{ 
+                    document.body.style.setProperty("background-color",current.style.backgroundColor);
+
+                }
+			    
+            }
+            
+        });
 
 }
