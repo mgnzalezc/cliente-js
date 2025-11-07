@@ -8,7 +8,7 @@ window.onload = () => {
         let nuevoLi = document.createElement("li");
         let texto = prompt("Añade texto al final:");
         nuevoLi.appendChild(texto);
-        
+        //seguir aqui
     }
     
 
