@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Tareas</title>
+    <script src="ej24listaTareas.js"></script>
+</head>
+<body>
+    <style>
+        ul{
+            width:400px;
+            margin-left: 40px;
+        }
+        li{
+            padding:10px;
+            list-style:lower-roman;
+            list-style-position: inside;
+            background-color: bisque;
+        }
+        li:nth-of-type(2n){
+            background-color: rgb(255, 252, 247);
+        }
+
+    </style>
+    <ul>
+        <li>Recoger cupcakes Balbisiana</li>
+        <li>Descambiar jersey Zara</li>
+        <li>Sacar al perro</li>
+        <li>Pilates</li>
+        <li>Cuidar el huerto</li>
+        <li>Running</li>
+        <li>Ir al concesionario</li>
+    </ul>
+    <button id="aPpio">Añadir principio</button>
+    <button id="aFinal">Añadir final</button>
+    <button id="bPpio">Borrar principio</button>
+    <button id="bFinal">Borrar final</button>
+
+
+</body>
+</html>
