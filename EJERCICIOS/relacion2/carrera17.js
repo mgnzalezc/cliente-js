@@ -2,13 +2,16 @@ window.onload = ()=>{
 
     let boton = document.querySelector("button");
     boton.onclick = ()=>{
-        let parra = document.querySelectorAll("div");       
+
+        let parra = document.querySelectorAll("div");    
+
         parra.forEach(current => {
-            console.log("hola");
+
             let rdm = parseInt(Math.random()*(20-10+1)+10);
-            let newMargin = ((current.style.marginLeft)+rdm);
-            //console.log(newMargin);
-            current.style.setProperty("margin-left",newMargin+"px");
+            let newLeft = ((current.style.left)+rdm);
+            alert(current.style.left);
+            current.style.setProperty("left",newLeft+"px");
+
         });
     };
     
