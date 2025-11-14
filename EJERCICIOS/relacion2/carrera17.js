@@ -8,9 +8,9 @@ window.onload = ()=>{
         parra.forEach(current => {
 
             let rdm = parseInt(Math.random()*(20-10+1)+10);
-            let newLeft = ((current.style.left)+rdm);
-            alert(current.style.left);
-            current.style.setProperty("left",newLeft+"px");
+            let newLeft = ((current.style.marginLeft)+rdm);
+            //intervalo!!!!
+            current.style.setProperty("margin-left",newLeft+"px");
 
         });
     };
