@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivina</title>
+    <script src="adivina.js"></script>
 </head>
 <body>
     <h3>Adivina el número</h3>
@@ -11,21 +12,23 @@
 
     
     <label for="apuesta">Tu apuesta:</label>
-    <input type="number" name="apuesta" max="100">
+    <input type="number" disabled name="apuesta" id="apuesta">
     <input type="button" disabled class="jugar" value="Apuesta">
     <input type="button" disabled class="rendirse" value="Me rindo">
 
     <br>
     <br>
         
-    <img src="imagenes/01 Adivina/inicio.jpg" alt="inicioFoto" width="200px">
+    <input type="button" id="inicio">
+        <img  src="imagenes/01 Adivina/inicio.jpg" alt="inicioFoto" width="200px">
+    </input> <!--porque se me ve mal el html y el boton esta al lado d la imagen?-->
+   
        
     <br>
     <br>
 
-    <br>Intentos <input disabled type="text" value="70">
-    <br>INFO: <input type="text" value="hola">
-
+    <br>Intentos <input disabled id="intentos" type="text" value="0">
+    <br>INFO: <input disabled id="info" type="text" value="" style="width:300px">
 
 </body>
 </html>
