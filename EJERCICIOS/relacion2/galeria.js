@@ -8,7 +8,7 @@ window.onload = ()=>{
     let img = document.querySelector("img");
     parra.forEach(current => {
         
-        current.onclick=function(){
+        current.onclick=()=>{
 
             if(current.className == "atras"){
                 count--;

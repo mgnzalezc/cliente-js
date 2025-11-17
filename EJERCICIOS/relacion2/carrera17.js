@@ -3,14 +3,17 @@ window.onload = ()=>{
     let boton = document.querySelector("button");
     boton.onclick = ()=>{
 
-        let parra = document.querySelectorAll("div");    
+        let divs = document.querySelectorAll("div");    
 
-        parra.forEach(current => {
+        divs.forEach(current => {
 
-            let rdm = parseInt(Math.random()*(20-10+1)+10);
-            let newLeft = ((current.style.marginLeft)+rdm);
-            //intervalo!!!!
-            current.style.setProperty("margin-left",newLeft+"px");
+            let speed = parseInt(Math.random()*(200-100+1)+100);
+
+            let carrera = setInterval(correr,speed);
+
+            if(parseInt(current.style.marginLeft) > "1000"){
+                clearInterval(carrera);
+            }
 
         });
     };
@@ -18,5 +21,10 @@ window.onload = ()=>{
 
 }
 
-//margin left mover hasta q sea 
-//sumar un num rdm de 10-20
+function correr(){
+    let rdm = parseInt(Math.random()*(20-10+1)+10);
+    let newLeft = (parseInt(this.style.marginLeft)+rdm);
+    this.style.setProperty("margin-left",(newLeft+"px"));
+
+}
+
