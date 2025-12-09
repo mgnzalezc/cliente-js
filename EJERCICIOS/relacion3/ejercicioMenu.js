@@ -8,7 +8,14 @@ window.onload = ()=>{
 
     document.addEventListener("click",(e) => { 
         //document es toda la parte visible del navegador, aqui no vale document
-        if((!menu.contains(e.target))){ //si menu no contiene el target del onclick, es decir si meno no se ha clickado, entonces cierras. hay q tener cuidado porque menu tiene botones y si no lo pones asi, se cerraba cuando clickabas los botones pero no el borde del menu
+        if((!menu.contains(e.target))){ 
+            /**
+             * 
+             * target es donde estas clickando
+             * aqui estas diciendo, si el target es menu no te cierres
+             * si el target NO es el menu, entonces cierrate
+             */
+            
             menu.style.display = "none";
         }
         
