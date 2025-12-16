@@ -6,14 +6,14 @@ window.onload = () =>{
 
     for(element of opciones) { //cada vez que se pulse un check
         element.onclick = () => {
-
+            
             if(element.checked){
                 let text = element.name;
                 let nuevaOpcion = document.createElement("option");
                 nuevaOpcion.value = text;
                 nuevaOpcion.className = text;
                 desplegable.appendChild(nuevaOpcion);
-
+                
             }else{
                 let nombre = element.name;
                 let toDelete = document.querySelector("option[name='"+nombre+"']");
