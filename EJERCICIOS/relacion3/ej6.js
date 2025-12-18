@@ -25,7 +25,7 @@ window.onload = () =>{
 
 
             
-            //let pais = document.createTextNode(text);
+            //let pais = document.createTextNode(text);̣ ̣
             
             
 
