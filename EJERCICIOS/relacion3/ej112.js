@@ -6,6 +6,7 @@ window.onload = ()=>{
     inputs.forEach(element => {
         element.addEventListener("blur", () => {
             borrar(formu);
+            count = false;
 
             let dni = formu.dni;
             dni.value = dni.value.trim(); //esto se puede hacer en una linea pero prefiero acostumbrarme al .value
@@ -189,6 +190,9 @@ window.onload = ()=>{
 
     enviar.addEventListener("click", (e)=>{
         e.preventDefault();
+        //console.log(validarDNI(formu));
+
+
         if(count){
             formu.setAttribute("action", "ej11bien.html");
             formu.submit();
@@ -205,4 +209,30 @@ function borrar(formu){
     for (const current of parra) {
         formu.removeChild(current);
     }
+}
+
+
+function validarDNI(formu){
+    let dni = formu.dni;
+    dni.value = dni.value.trim();
+    if(dni.value == "" || dni.value.length != 9){
+                let errorDNIv = document.createElement("p");
+                if(dni.value == ""){
+                    errorDNIv.textContent = "El DNI no puede estar vacío";
+                } else {
+                    errorDNIv.textContent = "Inserta un DNI válido";
+                }
+                errorDNIv.style.color = "#b00020";
+                errorDNIv.style.fontSize = "10px";
+                errorDNIv.style.margin = "5px";
+                errorDNIv.style.padding = "6px";
+                errorDNIv.style.backgroundColor = "#fdecea";
+                errorDNIv.style.borderLeft = "5px solid #b00020";
+                errorDNIv.style.borderRadius = "4px";
+                errorDNIv.style.width = "fit-content";
+                formu.insertBefore(errorDNIv, formu.dni);
+                
+                return;
+            }
+
 }
