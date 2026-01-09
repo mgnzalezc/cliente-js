@@ -122,7 +122,7 @@ window.onload = ()=>{
         e.preventDefault();
         let correcto = 0;
         let dni = formu.dni;
-        dni.value = dni.value.trim();
+        dni.value = dni.value.trim(); //esto se puede hacer arriba
         let apell = formu.apellidos;
         apell.value = apell.value.trim();
         let name = formu.nombre;
@@ -184,7 +184,7 @@ window.onload = ()=>{
         }else {
             let arrayFecha = fecha.value.split("/");
             // array[0] dia, array[1] mes, array[2] año, 
-            if(arrayFecha[0].length != 2 && arrayFecha[1] !=2 && arrayFecha[3] !=4 ){
+            if(arrayFecha[0].length != 2 && arrayFecha[1] !=2 && arrayFecha[3] !=4 ){ //esta mal esto, mirar en 112
                 if(isNaN(arrayFecha[0]) || isNaN(arrayFecha[1]) || isNaN(arrayFecha[2])){
                     errorDOB.hidden = false;
                     errorDOBv.hidden = true;
@@ -239,7 +239,7 @@ window.onload = ()=>{
         }
 
         if(correcto==6){
-            formu.setAttribute("action", "ej11bien.html")
+            formu.setAttribute("action", "ej11bien.html");
             formu.submit();
         }
 
