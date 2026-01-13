@@ -3,7 +3,7 @@ window.onload = () => {
     let copyFrom = texto[0];
     let copyTo = texto[1];
     
-    copyFrom.onkeydown = () => {
+    copyFrom.onkeyup = () => {
         copyTo.value = copyFrom.value;
     }
 
