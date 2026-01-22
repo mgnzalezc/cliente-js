@@ -34,6 +34,9 @@ function mostrarBiblioteca(){
         foto.addEventListener("click", ()=>{
             //1. guardo info de ese libro en sessionStorage
             //2. me muevo a la pagina de mostrar.html
+
+            let res = JSON.stringify(libro);
+            sessionStorage.setItem("libroMostrar", res);
             location.href = "mostrar.html"; //location es un objeto del navegador
         })
 
