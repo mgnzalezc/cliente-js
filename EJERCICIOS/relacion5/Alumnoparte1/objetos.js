@@ -49,6 +49,12 @@ window.onload = ()=>{
         "notas": [1,2,2,10]
     };
 
+    mostrar(tutor1);
+    cambiarNombre(tutor1, "maria");
+    mostrar(tutor1);
+
+
+/*
     let textoAlu = "";
     let textoTutor = "";
     let textoAsig = [];
@@ -107,12 +113,32 @@ window.onload = ()=>{
     for (let i = 0; i < textoAsig.length; i++) {
         textoAsig2.push(textoAsig[i].split("-"));
     }
+*/
 
 
-    console.log("ALU: "+textoAlu);
-    console.log("Tut: "+textoTutor);
-    console.log(textoAsig);
-    console.log(textoAsig2);
+}
 
+function mostrar(tutor){
+    let dpersonales = document.querySelector("#datos-personales");
+    let dacademicos = document.querySelector("#datos-academicos");
+    let dtutor = document.querySelector("#datos-tutor");
+    let lista = document.querySelector("#lista-asignaturas");
 
+    let res = "";
+
+    for (const key in tutor) {
+        res += "<b>" + key.toUpperCase() + "</b>: ";
+        res += tutor[key]+"<br>";
+    }
+    console.log(res);
+
+    //añadir al dom
+    let div = document.createElement("div");
+    div.innerHTML= res; //con inner html se pone el <br> salto de linea y todas las etiquetas que queramos
+    dtutor.appendChild(div);
+    
+}
+
+function cambiarNombre(tutor, newnombre){
+    tutor["nombre"] = newnombre;
 }
