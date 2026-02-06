@@ -44,6 +44,8 @@ window.onload = ()=>{
             foto.setAttribute("alt", "foto portada");
             info.appendChild(foto);
         }
+
+        
         
     }
 
