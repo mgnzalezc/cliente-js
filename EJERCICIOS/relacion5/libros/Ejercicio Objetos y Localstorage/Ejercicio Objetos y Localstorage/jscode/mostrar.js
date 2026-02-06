@@ -41,7 +41,7 @@ window.onload = ()=>{
         else if(key == "cover"){
             let foto = document.createElement("img");
             foto.setAttribute("src", libro['cover']);
-            foto.setAttribute("alt", "foto portada");
+            fot.setAttribute("alt", "foto portada");
             info.appendChild(foto);
         }
 
