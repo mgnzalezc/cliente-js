@@ -1,7 +1,6 @@
 window.onload = function(){
 
     let salida = document.querySelector("section");
-    
 
         let origen = "https://dragonball-api.com/api/characters";
 
